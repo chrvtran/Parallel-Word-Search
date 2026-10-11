@@ -1,0 +1,1 @@
+(1) The total time was 12ms, with the process taking 8ms and the operating system taking 4ms.
