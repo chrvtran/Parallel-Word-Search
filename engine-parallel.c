@@ -133,14 +133,11 @@ struct count_result search_instance(char *filename,char *target){
     // determining file size
     long file_size = ftell(file);
     fclose(file);
-    if (file_size < 0) {
-        return result;
-    }
+    if (file_size < 0) return result;
 
     pthread_t threads[NUM_THREADS];
     struct worker_args args[NUM_THREADS];
-    // arrat of workers
-    struct count_result *worker_results[NUM_THREADS] = {NULL};
+    struct count_result *worker_results[NUM_THREADS] = {NULL}; // array of workers
 
     // divide bytes into threads
     for (int i = 0; i < NUM_THREADS; i++) {

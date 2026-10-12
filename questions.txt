@@ -1,1 +1,3 @@
 (1) The total time was 12ms, with the process taking 8ms and the operating system taking 4ms.
+(2) I don't suspect any data races because I pass and use argument structures independently for each thread. I also allocate each new result and make copies as needed, never altering the original variables and doing read only.
+(3) For parallel, my process took 21ms, whereas my OpenMP took 17ms. This makes sense because OpenMP automatically handles thread management, so there's less overhead than manually creating and managing threads with Pthreads.
