@@ -8,7 +8,8 @@
 #include <ctype.h>
 
 #define MAX_LINE_LENGTH 256
-#define NUM_THREADS 4
+#define NUM_THREADS 8
+// threads 2 4 8 may work differently depending on size
 
 struct worker_args {
     char *filename;
